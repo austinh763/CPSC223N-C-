@@ -189,7 +189,7 @@ public TravellingBallUI() {
       }
       else {
         x = (double)p3x - ballRadius;
-        y = (double)p3y + (delta - (x+ballRadius - (double)p3x));
+        y = (double)p3y - (delta - (x+ballRadius - (double)p3x));
         direction.Text = "Up";
       }
     }
