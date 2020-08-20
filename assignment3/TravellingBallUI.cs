@@ -158,18 +158,18 @@ public TravellingBallUI() {
     Invalidate();
   }
 
-    protected void updateBallCoords(System.Object sender, ElapsedEventArgs even) {
-    x_Coordinate.Text = "X: " + x.ToString();
-    y_Coordinate.Text = "Y: " + y.ToString();
+  protected void updateBallCoords(System.Object sender, ElapsedEventArgs even) {
+    x_Coordinate.Text = x.ToString();
+    y_Coordinate.Text = y.ToString();
     if(System.Math.Abs(y+ballRadius - p0y) < 0.5) {
       if(System.Math.Abs(x+ballRadius - (double)p1x) > delta) {
         x -= delta;
-        direction.Text = "Direction: Left";
+        direction.Text = "Left";
       }
       else {
         y = (double)p1y + (delta - (x+ballRadius - (double)p1x));
         x = (double)p1x - ballRadius;
-        direction.Text = "Direction: Down";
+        direction.Text = "Down";
 
       }
     }
@@ -180,7 +180,7 @@ public TravellingBallUI() {
       else {
         x = (double)p2x + (delta - ((double)p2y - (y+ballRadius)));
         y = (double)p2y - ballRadius;
-        direction.Text = "Direction: Right";
+        direction.Text = "Right";
       }
     }
     else if(System.Math.Abs(y + ballRadius - (double)p2y) < 0.5) {
@@ -189,8 +189,8 @@ public TravellingBallUI() {
       }
       else {
         x = (double)p3x - ballRadius;
-        y = (double)p3y - (delta - (x+ballRadius - (double)p3x));
-        direction.Text = "Direction: Up";
+        y = (double)p3y + (delta - (x+ballRadius - (double)p3x));
+        direction.Text = "Up";
       }
     }
     else if(System.Math.Abs(x + ballRadius - (double)p3x) < 0.5) {
@@ -208,6 +208,10 @@ public TravellingBallUI() {
     }
   }
 
+  protected void resetClick (Object sender, EventArgs events) {
+    x = (double)ballStartingX - ballRadius;
+    y = (double)ballStartingY - ballRadius;
+  }
 
   protected void resetClick (Object sender, EventArgs events) {
     x = (double)ballStartingX - ballRadius;
