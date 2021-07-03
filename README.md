@@ -12,6 +12,4 @@ Assignment 4: Ball bouncing along the edges of a frame(shows how refresh rate an
 
 Assignment 5: Clicking on moving circles before they hit a boundary (read coordinates of the cursor into x/y variables, making random integer generator).
 
-Assignment 6: A point that draws a flower (converting mathematical formula into cartesian using calculus, writing a bitmap in memory)
-
-Final: Changing the color of the flower trace by clicking the tip/point while flower is being drawn.
+Final: A point that draws a flower (converting mathematical formula into cartesian using calculus, writing a bitmap in memory). Changing the color of the flower trace by clicking the tip/point while flower is being drawn.
